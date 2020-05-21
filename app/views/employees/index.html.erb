@@ -1,0 +1,13 @@
+<h1> Employees </h1>
+
+<% @employees.each do |employee| %>
+    <%= link_to employee_path(employee) do %>
+        <h3 class="index_container"> <%= employee.first_name + ' '  + employee.last_name %></h3>
+    <% end %>
+<% end %>
+
+<%= link_to new_employee_path do %>
+    <div class="button">
+        Add New Employee 
+    </div>
+<% end %>
