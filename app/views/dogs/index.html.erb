@@ -1,0 +1,9 @@
+<h1> Dogs </h1>
+
+<% @dogs.sort_by do |dog| dog.employees.size end.each do |dog| %>
+    <%= link_to dog_path(dog) do %>
+        <h3 class="index_container">
+            <%= dog.name %>
+        </h3>
+    <% end %>
+<% end %>
